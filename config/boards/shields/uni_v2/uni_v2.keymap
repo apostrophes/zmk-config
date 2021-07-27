@@ -13,9 +13,9 @@
 // |     |     |  1  |  C  |  V  |  N  |  M   |  2  |    |     |     |
 //                         | ALT | LWR | SPC | RSE  | ALT |
             bindings = <
-   &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P    &kp LBKT
-   &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
-               &kp 1 &kp C &kp V &kp N &kp M &kp 2
+   &kp Q &kp W &kp E  &kp R &kp T &kp Y &kp U &kp I  &kp O &kp P    &kp LBKT
+   &kp A &kp S &kp D  &kp F &kp G &kp H &kp J &kp K  &kp L &kp SEMI &kp SQT
+               &kp N1 &kp C &kp V &kp N &kp M &kp N2
             >;
         };
     };
