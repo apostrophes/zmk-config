@@ -33,29 +33,19 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Eek! Left)
-        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=eek_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Eek! DTS File
+      - name: West Build (Uni V2)
+        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=uni_v2 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: Uni V2 DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano_v2.dts.pre.tmp
-      - name: Eek! Left Kconfig file
+      - name: Uni V2 Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 eek_left_nice_nano_v2.uf2
-      - name: Archive (Eek! Left)
+        run: cp build/zephyr/zmk.uf2 uni_v2_nice_nano_v2.uf2
+      - name: Archive (Uni V2)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: eek_left_nice_nano_v2.uf2
-      - name: West Build (Eek! Right)
-        run: west build --pristine -s zmk/app -b nice_nano_v2 -- -DSHIELD=eek_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-
-      - name: Eek! Right Kconfig file
-        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
-      - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 eek_right_nice_nano_v2.uf2
-      - name: Archive (Eek! Right)
-        uses: actions/upload-artifact@v2
-        with:
-          name: firmware
-          path: eek_right_nice_nano_v2.uf2
+          path: uni_v2_nice_nano_v2.uf2
+      - name: West Build (Uni V2)
+        run: west build --pristine -s zmk/app -b nice_nano_v2 -- -DSHIELD=uni_v2 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
