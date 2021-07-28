@@ -1,2 +1,5 @@
 config SHIELD_UNI_V2
     def_bool $(shields_list_contains,uni_v2)
+
+config ZMK_HID_REPORT_TYPE_NKRO
+    default y
