@@ -2,11 +2,11 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: apostrophes
-      url-base: https://github.com/apostrophes
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      remote: apostrophes
+      remote: petejohanson
       revision: core/hid-nkro-configurable-support
       import: app/west.yml
   self:
