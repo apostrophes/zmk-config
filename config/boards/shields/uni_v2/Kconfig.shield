@@ -3,8 +3,8 @@ if SHIELD_UNI_V2
 config ZMK_KEYBOARD_NAME
     default "Uni V2"
 
+endif
+
 choice ZMK_HID_REPORT_TYPE
     default ZMK_HID_REPORT_TYPE_NKRO
 endchoice
-
-endif
