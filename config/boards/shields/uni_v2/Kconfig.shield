@@ -5,6 +5,4 @@ config ZMK_KEYBOARD_NAME
 
 endif
 
-choice ZMK_HID_REPORT_TYPE
-    default ZMK_HID_REPORT_TYPE_NKRO
-endchoice
+CONFIG_ZMK_HID_REPORT_TYPE = y
