@@ -5,4 +5,4 @@ config ZMK_KEYBOARD_NAME
 
 endif
 
-CONFIG_ZMK_HID_REPORT_TYPE = y
+config ZMK_HID_REPORT_TYPE = y
