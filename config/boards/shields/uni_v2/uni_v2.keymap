@@ -19,7 +19,7 @@
         combo_default {
             timeout-ms = <50>;
             key-positions = <4 5>;
-            bindings = <&to 0>;
+            bindings = <&mo 0>;
             layers = <1>;
         };
     }; 
